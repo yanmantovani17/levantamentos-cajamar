@@ -1,6 +1,6 @@
 # Levantamentos – Matriz Cajamar
 
-## Galpão M100 – juntas, trincas e fissuras do piso
+## Galpão 1, 2 e 3 – juntas, trincas e fissuras do piso
 
 Arquivo: `galpao-m100/Galpao-M100-Juntas-Trincas-Fissuras.html`
 
