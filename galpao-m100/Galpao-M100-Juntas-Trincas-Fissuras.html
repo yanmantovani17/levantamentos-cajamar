@@ -129,7 +129,7 @@ const HEX = {junta:'#1d5fd1', trinca:'#d13a2c', fissura:'#d08a00'};
 const NOME = {junta:'Junta', trinca:'Trinca', fissura:'Fissura'};
 const PLUR = {junta:'Juntas deslocadas', trinca:'Trincas', fissura:'Fissuras'};
 const L = 354.3;
-const U = x => L - x;              // eixo 1 à esquerda
+const U = x => x;                  // módulo 1 à esquerda, como no projeto
 const fmt = (v,d=1) => v==null ? '—' : v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const items = DATA.items;
 const byId = Object.fromEntries(items.map(i=>[i.id,i]));
@@ -206,7 +206,7 @@ function plan(){
   });
   el('text',{x:U(177),y:123,'text-anchor':'middle','font-size':3.4,fill:'#7d776b','font-family':'IBM Plex Sans, Arial, sans-serif'},g0).textContent='FACHADA EXTERNA (lado da rodovia / faixa de domínio)';
   // scale bar
-  const sx=U(354.3), sy=130;
+  const sx=U(0), sy=130;
   el('line',{x1:sx,y1:sy,x2:sx+22.5,y2:sy,stroke:'#333','stroke-width':.7},g0);
   [0,22.5].forEach(d=>el('line',{x1:sx+d,y1:sy-1.5,x2:sx+d,y2:sy+1.5,stroke:'#333','stroke-width':.5},g0));
   el('text',{x:sx+11.25,y:sy-2.4,'text-anchor':'middle','font-size':3,fill:'#333','font-family':'IBM Plex Sans, Arial, sans-serif'},g0).textContent='22,50 m';
